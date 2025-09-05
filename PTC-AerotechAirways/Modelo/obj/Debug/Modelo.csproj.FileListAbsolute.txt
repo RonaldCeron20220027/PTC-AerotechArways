@@ -1,0 +1,85 @@
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.xml
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.pdb
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.pdb
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.dll
+C:\Users\Estudiante\Desktop\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.pdb
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\Modelo.pdb
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Buffers.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Memory.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.csproj.Up2Date
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.dll
+C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Modelo\obj\Debug\Modelo.pdb
