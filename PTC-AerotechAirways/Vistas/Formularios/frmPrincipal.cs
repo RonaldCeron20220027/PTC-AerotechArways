@@ -19,6 +19,8 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             ConstruirFormularioResponsive();
+            frmRegistrarUsuario.Anchor = AnchorStyles.None;
+            frmLogin.Anchor = AnchorStyles.None;
         }
 
         private void ConstruirFormularioResponsive()
@@ -122,14 +124,14 @@ namespace Vistas.Formularios
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-                pnlPrincipal.Controls.Clear();
-                pnlPrincipal.Controls.Add(frmLogin);
+            pnlprincipal.Controls.Clear();
+            pnlprincipal.Controls.Add(frmLogin);
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
-            pnlPrincipal.Controls.Clear();
-            pnlPrincipal.Controls.Add(frmRegistrarUsuario);
+            pnlprincipal.Controls.Clear();
+            pnlprincipal.Controls.Add(frmRegistrarUsuario);
         }
 
     }

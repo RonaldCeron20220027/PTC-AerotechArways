@@ -55,10 +55,10 @@ namespace Modelo.Entidades
                 return false;
             }
         }
-        public static DataTable cargarReservasCB()
+        public static DataTable cargarPasajeros()
         {
             SqlConnection conn = Conexion.Conectar();
-            string querycargar = "select ReservaID,PasajeroID from Reservas;";
+            string querycargar = "SELECT PasajeroID, Nombres, Apellidos, NumeroPasaporte\r\nFROM Pasajeros\r\nORDER BY PasajeroID ASC;\r\n;";
             SqlDataAdapter dt = new SqlDataAdapter(querycargar, conn);
             DataTable tabla = new DataTable();
             dt.Fill(tabla);
@@ -104,7 +104,7 @@ namespace Modelo.Entidades
             }
         }
 
-        public bool EliminarReservas(int idR)
+        public bool EliminarPasajero(int idP)
         {        
             try
             {
@@ -112,7 +112,7 @@ namespace Modelo.Entidades
                 conexion = Conexion.Conectar();
                 string consultaDelete = "DELETE FROM Pasajeros WHERE PasajeroID = @id";
                 SqlCommand delete = new SqlCommand(consultaDelete, conexion);
-                delete.Parameters.AddWithValue("@id", idR);
+                delete.Parameters.AddWithValue("@id", idP);
                 delete.ExecuteNonQuery();
                 return true;
             }
@@ -124,11 +124,30 @@ namespace Modelo.Entidades
 
         }
 
+        public bool EliminarReserva(int idR)
+        {
+            try
+            {
+                SqlConnection conexion = null;
+                conexion = Conexion.Conectar();
+                string consultaDelete = "DELETE FROM Pasajeros WHERE Reservas = @id";
+                SqlCommand delete = new SqlCommand(consultaDelete, conexion);
+                delete.Parameters.AddWithValue("@id", idR);
+                delete.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el registro: " + ex.Message, "Error al eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
         public static DataTable BuscarEnGestioPasajeros(string termino)
         {
             using (SqlConnection conexion = Conexion.Conectar())
             {
-                string query = @"select *from Pasajeros WHERE Nombres LIKE @Termino OR Apellidos LIKE @Termino ;";
+                string query = @"select *from Pasajeros WHERE Nombres LIKE @Termino OR Apellidos LIKE @Termino OR PasajeroID LIKE @Termino ;";
 
                 using (SqlCommand cmd = new SqlCommand(query, conexion))
                 {
@@ -143,25 +162,34 @@ namespace Modelo.Entidades
 
         public bool ActualizarReserva()
         {
+            if (reservaID <= 0)
+            {
+                MessageBox.Show("ID de reserva inválido. Selecciona una reserva antes de actualizar.");
+                return false;
+            }
+
             try
             {
                 using (SqlConnection conectar = Conexion.Conectar())
                 {
                     string consultaUpdate = "UPDATE Reservas SET " +
+                        "PasajeroID = @PasajeroID, " +
                         "VueloID = @VueloID, " +
                         "FechaReserva = @FechaReserva, " +
                         "IDClaseViaje = @IDClaseViaje, " +
                         "PrecioTotal = @PrecioTotal " +
                         "WHERE ReservaID = @ReservaID";
 
-                    using (SqlCommand update = new SqlCommand(consultaUpdate, conectar))
+                    using (SqlCommand cmd = new SqlCommand(consultaUpdate, conectar))
                     {
-                        update.Parameters.AddWithValue("@ReservaID", ReservaID);
-                        update.Parameters.AddWithValue("@VueloID", VueloID);
-                        update.Parameters.AddWithValue("@FechaReserva", FechaReserva);
-                        update.Parameters.AddWithValue("@IDClaseViaje", IDClaseViaje);
-                        update.Parameters.AddWithValue("@PrecioTotal", PrecioTotal);
-                        int filasAfectadas = update.ExecuteNonQuery();
+                        cmd.Parameters.AddWithValue("@PasajeroID", pasajeroID);
+                        cmd.Parameters.AddWithValue("@VueloID", vueloID);
+                        cmd.Parameters.AddWithValue("@FechaReserva", fechaReserva);
+                        cmd.Parameters.AddWithValue("@IDClaseViaje", iDClaseViaje);
+                        cmd.Parameters.AddWithValue("@PrecioTotal", precioTotal);
+                        cmd.Parameters.AddWithValue("@ReservaID", reservaID);
+
+                        int filasAfectadas = cmd.ExecuteNonQuery();
                         return filasAfectadas > 0;
                     }
                 }
@@ -170,6 +198,25 @@ namespace Modelo.Entidades
             {
                 MessageBox.Show("Error al actualizar la reserva: " + ex.Message, "Error de Base de Datos");
                 return false;
+            }
+        }
+
+
+        public static DataTable ListaPasajeros()
+        {
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar();
+                string consultaQuery = "select PasajeroID,Nombres,Apellidos,NumeroPasaporte from Pasajeros;";
+                SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+                DataTable tableCargar = new DataTable();
+                add.Fill(tableCargar);
+                return tableCargar;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos" + ex);
+                return null;
             }
         }
 

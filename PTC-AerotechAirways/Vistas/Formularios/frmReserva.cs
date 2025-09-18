@@ -16,6 +16,8 @@ namespace Vistas.Formularios
 {
     public partial class frmReserva : Form
     {
+        private int pasajeroIDSeleccionado = -1;
+        private int reservaID = -1;
         public frmReserva()
         {
             InitializeComponent();
@@ -42,7 +44,7 @@ namespace Vistas.Formularios
                 pj.PaisNacionalidadID = Convert.ToInt32(cbPais.SelectedValue);
                 pj.RegistrarPasajeros();
                 Mostrar();
-
+                Limpiar();
                 MessageBox.Show("Pasajero registrado existosamente");
 
             }
@@ -53,14 +55,37 @@ namespace Vistas.Formularios
             }
         }
 
+        private void Limpiar()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtPasaporte.Clear();
+            dtpNacimiento.Value=DateTime.Now;
+            cbPais.SelectedIndex=-1;
+
+
+            cbClase.SelectedIndex=-1;
+            cbReserva.SelectedIndex=1;
+            cbVuelo.SelectedIndex=1;
+            dtpReserva.Value=DateTime.Now;
+
+        }
+
         private void Mostrar()
         {
             dvgReserva.DataSource = null;
             dvgReserva.DataSource = Pasajeros.cargarPasajeros();
+
+            dvgReservas.DataSource = null;
+            dvgReservas.DataSource=Reservas.cargarReservas();
+
+            dvgListaPasajero.DataSource = null;
+            dvgListaPasajero.DataSource = Reservas.ListaPasajeros();
         }
 
         private void frmReserva_Load(object sender, EventArgs e)
         {
+
             Mostrar();
             cargarClase();
             cargarPais();
@@ -70,9 +95,9 @@ namespace Vistas.Formularios
         private void cargarReserva()
         {
             cbReserva.DataSource = null;
-            cbReserva.DataSource = Reservas.cargarReservasCB();
+            cbReserva.DataSource = Reservas.cargarPasajeros();
             cbReserva.DisplayMember = "PasajeroID";
-            cbReserva.ValueMember = "ReservaID";
+            cbReserva.ValueMember = "PasajeroID";
             cbReserva.SelectedIndex = -1;
 
         }
@@ -100,7 +125,7 @@ namespace Vistas.Formularios
             int idr = int.Parse(dvgReserva.CurrentRow.Cells[0].Value.ToString());
             Reservas rvs = new Reservas();
 
-            if (rvs.EliminarReservas(idr) == true)
+            if (rvs.EliminarPasajero(idr) == true)
             {
                 MessageBox.Show("Registro eliminado exitosamente");
                 Mostrar();
@@ -128,13 +153,12 @@ namespace Vistas.Formularios
         {
             try
             {
-                if (dvgReserva.CurrentRow == null)
+
+                if (dvgReserva.CurrentRow == null || dvgReserva.CurrentRow.IsNewRow || dvgReserva.CurrentRow.Cells.Count == 0)
                 {
-                    MessageBox.Show("Por favor selecciona una reserva para actualizar.");
+                    MessageBox.Show("Por favor selecciona una reserva válida para actualizar.");
                     return;
                 }
-
-                Pasajeros P = new Pasajeros();
 
                 if (!int.TryParse(dvgReserva.CurrentRow.Cells[0].Value?.ToString(), out int PasajeroID))
                 {
@@ -142,47 +166,49 @@ namespace Vistas.Formularios
                     return;
                 }
 
-                if (txtNombre.Text == null )
+                
+                if (string.IsNullOrWhiteSpace(txtNombre.Text))
                 {
-                    MessageBox.Show("Debe seleccionar un vuelo válido.");
+                    MessageBox.Show("Debe ingresar un nombre válido.");
                     txtNombre.Focus();
                     return;
                 }
 
-                if (txtApellido.Text == null)
+                if (string.IsNullOrWhiteSpace(txtApellido.Text))
                 {
-                    MessageBox.Show("Debe seleccionar una clase de viaje válida.");
+                    MessageBox.Show("Debe ingresar un apellido válido.");
                     txtApellido.Focus();
                     return;
                 }
 
-                if (txtPasaporte.Text == null)
+                if (string.IsNullOrWhiteSpace(txtPasaporte.Text))
                 {
-                    MessageBox.Show("Debe seleccionar una clase de viaje válida.");
+                    MessageBox.Show("Debe ingresar un número de pasaporte válido.");
                     txtPasaporte.Focus();
                     return;
                 }
 
-                if (cbPais.SelectedValue == null || !int.TryParse(cbPais.Text.ToString(), out int PaisNacionalidadID))
+                if (cbPais.SelectedValue == null || !int.TryParse(cbPais.SelectedValue.ToString(), out int PaisNacionalidadID))
                 {
-                    MessageBox.Show("Debe seleccionar una clase de viaje válida.");
+                    MessageBox.Show("Debe seleccionar un país válido.");
                     cbPais.Focus();
                     return;
                 }
 
-             
-
-               P.Nombres = txtNombre.Text;
-               P.Apellidos = txtApellido.Text;
-               P.FechaNacimiento = dtpNacimiento.Value;
-               P.PaisNacionalidadID = Convert.ToInt32(cbPais.SelectedValue);
-                P.NumeroPasaporte = txtPasaporte.Text;
-                P.NumeroPasaporte = txtPasaporte.Text;
+                Pasajeros P = new Pasajeros
+                {
+                    PasajeroID= PasajeroID,
+                    Nombres = txtNombre.Text.Trim(),
+                    Apellidos = txtApellido.Text.Trim(),
+                    FechaNacimiento = dtpNacimiento.Value,
+                    PaisNacionalidadID = PaisNacionalidadID,
+                    NumeroPasaporte = txtPasaporte.Text.Trim()
+                };
 
                 if (P.ActualizarPasajero())
                 {
                     MessageBox.Show("Reserva actualizada correctamente.", "Éxito");
-                    Mostrar();
+                    Mostrar(); 
                 }
                 else
                 {
@@ -191,44 +217,74 @@ namespace Vistas.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error inesperado: {ex.Message}");
             }
         }
 
         private void dvgReserva_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex < 0 || dvgReserva.Rows[e.RowIndex].IsNewRow)
+                return;
+
+            try
             {
-                try
+                DataGridViewRow fila = dvgReserva.Rows[e.RowIndex];
+
+                if (int.TryParse(fila.Cells["PasajeroID"].Value?.ToString(), out int id))
                 {
-                    DataGridViewRow fila = dvgReserva.Rows[e.RowIndex];
-
-                  
-                    txtPrecioTotal.Text = fila.Cells[9].Value?.ToString() ?? "";  
-
-                 
-                    if (DateTime.TryParse(fila.Cells[4].Value?.ToString(), out DateTime fechaReserva))
-                    {
-                        dtpReserva.Value = fechaReserva;
-                    }
-
-                  
-                    string numeroVuelo = fila.Cells[5].Value?.ToString() ?? "";  
-                    SeleccionarEnComboBox(cbVuelo, "NumeroVuelo", numeroVuelo);
-
-                   
-                    string claseViaje = fila.Cells[8].Value?.ToString() ?? "";  
-                    SeleccionarEnComboBox(cbClase, "Descripcion", claseViaje);
-
+                    pasajeroIDSeleccionado = id;
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show($"Error al cargar datos: {ex.Message}");
+                    pasajeroIDSeleccionado = -1;
                 }
+
+                txtNombre.Text = fila.Cells["Nombres"].Value?.ToString() ?? "";
+                txtApellido.Text = fila.Cells["Apellidos"].Value?.ToString() ?? "";
+                txtPasaporte.Text = fila.Cells["NumeroPasaporte"].Value?.ToString() ?? "";
+
+                if (DateTime.TryParse(fila.Cells["FechaNacimiento"].Value?.ToString(), out DateTime fechaNacimiento))
+                {
+                    dtpNacimiento.Value = fechaNacimiento;
+                }
+                string paisDescripcion = fila.Cells["Pais"].Value?.ToString() ?? "";
+                SeleccionarPais(cbPais, "NombrePais", paisDescripcion);
+
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar datos: {ex.Message}");
+            }
         }
-        private void SeleccionarEnComboBox(ComboBox cmb, string columnName, string valueToFind)
+        private void SeleccionarPais(ComboBox cmb, string columnName, string valueToFind)
+        {
+            try
+            {
+                if (cmb.DataSource is DataTable dt && !string.IsNullOrEmpty(columnName) && !string.IsNullOrEmpty(valueToFind))
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row.Table.Columns.Contains(columnName) && row[columnName].ToString() == valueToFind)
+                        {
+                            cmb.SelectedValue = row[cmb.ValueMember];
+                            return;
+                        }
+                    }
+
+                    MessageBox.Show($"No se encontró el país con {columnName} = '{valueToFind}'");
+                }
+                else
+                {
+                    MessageBox.Show("El ComboBox no tiene un DataSource válido o los parámetros están vacíos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar país: " + ex.Message);
+            }
+        }
+        private void SeleccionarPasajero(ComboBox cmb, string columnName, string valueToFind)
         {
             try
             {
@@ -250,8 +306,52 @@ namespace Vistas.Formularios
                 MessageBox.Show("Error"+ex);
             }
         }
+        private void SeleccionarVuelo(ComboBox cmb, string columnName, string valueToFind)
+        {
+            try
+            {
+                DataTable dt = cmb.DataSource as DataTable;
+                if (dt != null)
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row[columnName].ToString() == valueToFind)
+                        {
+                            cmb.SelectedValue = row[cmb.ValueMember];
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
+        private void SeleccionarClase(ComboBox cmb, string columnName, string valueToFind)
+        {
+            try
+            {
+                DataTable dt = cmb.DataSource as DataTable;
+                if (dt != null)
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (row[columnName].ToString() == valueToFind)
+                        {
+                            cmb.SelectedValue = row[cmb.ValueMember];
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+        }
 
-        
+
         private void SoloTexto_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
@@ -268,6 +368,7 @@ namespace Vistas.Formularios
         }
 
 
+
         private void button4_Click(object sender, EventArgs e)
         {
             Reservas rsv = new Reservas();
@@ -277,7 +378,94 @@ namespace Vistas.Formularios
             rsv.VueloID = Convert.ToInt32(cbVuelo.SelectedValue);
             rsv.PrecioTotal = double.Parse(txtPrecioTotal.Text);
             rsv.RegistrarReserva();
+            Limpiar();
             Mostrar();
+        }
+
+        private void btnRefrescarPasajeros_Click(object sender, EventArgs e)
+        {
+            cargarReserva();
+        }
+
+
+        private void cbClase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbClase.SelectedIndex > -1 && cbClase.SelectedItem is DataRowView drv)
+            {
+                int claseID = Convert.ToInt32(drv["ClaseViajeID"]);
+
+                Dictionary<int, decimal> preciosPorClase = new Dictionary<int, decimal>()
+        {
+            { 3, 350 },   // Económica
+            { 2, 420 },   // Ejecutiva
+            { 1, 1200 }   // Primera Clase
+        };
+
+                if (preciosPorClase.ContainsKey(claseID))
+                {
+                    txtPrecioTotal.Text = preciosPorClase[claseID].ToString("F2");
+                }
+                else
+                {
+                    txtPrecioTotal.Text = "0.00";
+                }
+            }
+            else
+            {
+                txtPrecioTotal.Text = "";
+            }
+        }
+
+        private void btnEliminarRV_Click(object sender, EventArgs e)
+        {
+            int idr = int.Parse(dvgReservas.CurrentRow.Cells[0].Value.ToString());
+            Reservas rvs = new Reservas();
+
+            if (rvs.EliminarReserva(idr) == true)
+            {
+                MessageBox.Show("Registro eliminado exitosamente");
+                Mostrar();
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar ");
+            }
+        }
+
+        private void btnActualizarReserva_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dvgReservas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                try
+                {
+                    DataGridViewRow fila = dvgReserva.Rows[e.RowIndex];
+
+                    string Pasajero = fila.Cells["PasajeroID"].Value?.ToString() ?? "";
+                    SeleccionarPasajero(cbReserva, "PasajeroID", Pasajero);
+
+
+                    //if (DateTime.TryParse(fila.Cells["FechaReserva"].Value?.ToString(), out DateTime fechaReserva))
+                    //{
+                    //    dtpReserva.Value = fechaReserva;
+                    //}
+
+
+                    //string numeroVuelo = fila.Cells["VueloID"].Value?.ToString() ?? "";
+                    //SeleccionarVuelo(cbVuelo, "NumeroVuelo", numeroVuelo);
+
+                    //string claseViaje = fila.Cells["IDClaseViaje"].Value?.ToString() ?? "";
+                    //SeleccionarClase(cbClase, "Descripcion", claseViaje);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al cargar datos: {ex.Message}");
+                }
+            }
         }
     }
 }

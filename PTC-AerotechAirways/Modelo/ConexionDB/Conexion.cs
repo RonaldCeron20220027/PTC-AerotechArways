@@ -10,7 +10,7 @@ namespace ConexionDB
 {
     public class Conexion
     {
-        private static string servidor = "LAB03-DS-EQ09\\SQLEXPRESS";
+        private static string servidor = "Ro\\SQLEXPRESS";
         private static string basedeDatos = "AirTechAirways";
 
 

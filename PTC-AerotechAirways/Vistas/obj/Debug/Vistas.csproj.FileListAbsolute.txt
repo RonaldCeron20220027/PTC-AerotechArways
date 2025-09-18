@@ -142,3 +142,34 @@ C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-
 C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.exe
 C:\Users\ronal\OneDrive\Desktop\cambio 28-8-25ptc 2\cambio 28-8-25ptc\cambio 28-8-25ptc\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.pdb
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\Vistas.exe
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\Vistas.pdb
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\Modelo.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Buffers.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Memory.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\Modelo.pdb
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Buffers.xml
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Memory.xml
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmBoleto.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmGestionAerolineas.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmHome.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmPrincipal.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmRegistrarUsuario.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmReserva.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Formularios.frmRutasyEstado.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.exe
+C:\Users\ronal\OneDrive\Desktop\Defensa del 80\PTC-AerotechAirways\Vistas\obj\Debug\Vistas.pdb

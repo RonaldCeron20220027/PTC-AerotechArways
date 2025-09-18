@@ -121,25 +121,25 @@ namespace Vistas.Formularios
         public void loadformR()
         {
 
-            if (this.pnlPrincipal.Controls.Count > 0) ;
+            if (this.pnlprincipal.Controls.Count > 0) ;
            
             frmReserva frmReserva = new frmReserva();
             frmReserva.TopLevel = false;
             frmReserva.Dock= DockStyle.Fill;
-            this.pnlPrincipal.Controls.Add(frmReserva);
-            this.pnlPrincipal.Tag = frmReserva;
+            this.pnlprincipal.Controls.Add(frmReserva);
+            this.pnlprincipal.Tag = frmReserva;
              frmReserva.Show();
         }
 
         public void loadformG()
         {
-            if (this.pnlPrincipal.Controls.Count > 0) ;
+            if (this.pnlprincipal.Controls.Count > 0) ;
                 
             frmGestionAerolineas G = new frmGestionAerolineas();
             G.TopLevel = false;
             G.Dock = DockStyle.Fill;
-            this.pnlPrincipal.Controls.Add(G);
-            this.pnlPrincipal.Tag = G;
+            this.pnlprincipal.Controls.Add(G);
+            this.pnlprincipal.Tag = G;
             G.Show();
         }
 
@@ -150,12 +150,12 @@ namespace Vistas.Formularios
 
         public void loadformRE()
         {
-            if (this.pnlPrincipal.Controls.Count > 0) ;
+            if (this.pnlprincipal.Controls.Count > 0) ;
             frmRutasyEstado RE = new frmRutasyEstado();
             RE.TopLevel = false;
             RE.Dock = DockStyle.Fill;
-            this.pnlPrincipal.Controls.Add(RE);
-            this.pnlPrincipal.Tag = RE;
+            this.pnlprincipal.Controls.Add(RE);
+            this.pnlprincipal.Tag = RE;
             RE.Show();
         }
 
@@ -176,12 +176,12 @@ namespace Vistas.Formularios
 
         public void loadformBO()
         {
-            if (this.pnlPrincipal.Controls.Count > 0) ;
+            if (this.pnlprincipal.Controls.Count > 0) ;
             frmBoleto BO = new frmBoleto();
             BO.TopLevel = false;
             BO.Dock = DockStyle.Fill;
-            this.pnlPrincipal.Controls.Add(BO);
-            this.pnlPrincipal.Tag = BO;
+            this.pnlprincipal.Controls.Add(BO);
+            this.pnlprincipal.Tag = BO;
             BO.Show();
         }
 

@@ -12,7 +12,7 @@ namespace Modelo.Entidades
 {
     public class Pasajeros
     {
-        
+        private int pasajeroID;
         private string nombres;
         private string apellidos;
         private DateTime fechaNacimiento;
@@ -25,6 +25,7 @@ namespace Modelo.Entidades
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
         public int PaisNacionalidadID { get => paisNacionalidadID; set => paisNacionalidadID = value; }
         public string NumeroPasaporte { get => numeroPasaporte; set => numeroPasaporte = value; }
+        public int PasajeroID { get => pasajeroID; set => pasajeroID = value; }
 
         public bool RegistrarPasajeros()
         {
@@ -58,20 +59,20 @@ namespace Modelo.Entidades
                 using (SqlConnection conectar = Conexion.Conectar())
                 {
                     string consultaUpdate = "UPDATE Pasajeros SET " +
-                        "Nombres = @Nombres, " +
-                        "Apellidos = @Apellidos, " +
-                        "FechaNacimiento = @FechaNacimiento, " +
-                        "NumeroPasaporte = @NumeroPasaporte " +
-                        "PaisNacionalidadID = @PaisNacionalidadID"+
-                        "WHERE PasajeroID = @PasajeroID";
+                   "Nombres = @Nombres, " + "Apellidos = @Apellidos, " +
+                   "FechaNacimiento = @FechaNacimiento, " +
+                   "NumeroPasaporte = @NumeroPasaporte, " +
+                   "PaisNacionalidadID = @PaisNacionalidadID " +
+                   "WHERE PasajeroID = @PasajeroID";
 
                     using (SqlCommand update = new SqlCommand(consultaUpdate, conectar))
                     {
-                        update.Parameters.AddWithValue("@ReservaID", Nombres);
+                        update.Parameters.AddWithValue("@Nombres", Nombres);
                         update.Parameters.AddWithValue("@Apellidos", Apellidos);
                         update.Parameters.AddWithValue("@FechaNacimiento", FechaNacimiento);
                         update.Parameters.AddWithValue("@NumeroPasaporte", NumeroPasaporte );
                         update.Parameters.AddWithValue("@PaisNacionalidadID", PaisNacionalidadID);
+                        update.Parameters.AddWithValue("@PasajeroID", PasajeroID);
                         int filasAfectadas = update.ExecuteNonQuery();
                         return filasAfectadas > 0;
                     }
@@ -85,16 +86,12 @@ namespace Modelo.Entidades
         }
 
 
-
-
-
-
         public static DataTable cargarPasajeros()
         {
             try
             {
                 SqlConnection conexion = Conexion.Conectar();
-                string consultaQuery = "select*from Pasajeros;";
+                string consultaQuery = "select*from RegistroPasajero;";
                 SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
                 DataTable tableCargar = new DataTable();
                 add.Fill(tableCargar);

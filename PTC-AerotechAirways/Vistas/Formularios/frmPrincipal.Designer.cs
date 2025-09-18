@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
+            this.pnlprincipal = new System.Windows.Forms.TableLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(154)))), ((int)(((byte)(228)))));
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.ForeColor = System.Drawing.Color.Black;
-            this.pnlPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(800, 450);
-            this.pnlPrincipal.TabIndex = 0;
             // 
             // panel2
             // 
@@ -89,14 +79,27 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = true;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
+            // pnlprincipal
+            // 
+            this.pnlprincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(132)))), ((int)(((byte)(174)))));
+            this.pnlprincipal.ColumnCount = 1;
+            this.pnlprincipal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlprincipal.Location = new System.Drawing.Point(0, 0);
+            this.pnlprincipal.Name = "pnlprincipal";
+            this.pnlprincipal.RowCount = 1;
+            this.pnlprincipal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlprincipal.Size = new System.Drawing.Size(600, 450);
+            this.pnlprincipal.TabIndex = 2;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlprincipal);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pnlPrincipal);
             this.Name = "frmPrincipal";
             this.Text = "frmPrincipal";
             this.panel2.ResumeLayout(false);
@@ -106,11 +109,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnCrearCuenta;
+        private System.Windows.Forms.TableLayoutPanel pnlprincipal;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.pnlLateral = new System.Windows.Forms.Panel();
             this.pnlAdministracionAeronave = new System.Windows.Forms.Panel();
             this.btnGestionAerolinea = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.btnReservasPa = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlprincipal = new System.Windows.Forms.Panel();
             this.pnlLateral.SuspendLayout();
             this.pnlAdministracionAeronave.SuspendLayout();
             this.pnlSubmenuEq.SuspendLayout();
@@ -49,16 +49,6 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlPrincipal.Location = new System.Drawing.Point(250, 0);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(744, 450);
-            this.pnlPrincipal.TabIndex = 7;
             // 
             // pnlLateral
             // 
@@ -252,12 +242,20 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlprincipal
+            // 
+            this.pnlprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlprincipal.Location = new System.Drawing.Point(250, 0);
+            this.pnlprincipal.Name = "pnlprincipal";
+            this.pnlprincipal.Size = new System.Drawing.Size(744, 450);
+            this.pnlprincipal.TabIndex = 7;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(994, 450);
-            this.Controls.Add(this.pnlPrincipal);
+            this.Controls.Add(this.pnlprincipal);
             this.Controls.Add(this.pnlLateral);
             this.Name = "frmHome";
             this.Text = "frmHome";
@@ -273,8 +271,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Panel pnlLateral;
         private System.Windows.Forms.Button btnGestionAerolinea;
         private System.Windows.Forms.Button btnRegistro;
@@ -288,5 +284,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBoleto;
         private System.Windows.Forms.Panel pnlAdministracionAeronave;
+        private System.Windows.Forms.Panel pnlprincipal;
     }
 }

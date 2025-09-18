@@ -225,11 +225,14 @@ INSERT INTO Boletos (ReservaID, Peso, SobrecargoPorPeso, Asiento, FechaHoraSalid
 
 select *from ReservaPasajero
 select *from TipoAeronave
-select *from ClaseViaje
+select *from Reservas
 select *from Aerolineas
-select *from Aeronaves
-select *from Pasajeros
 
+select *from Reservas
+select *from Pasajeros
+select *from RegistroPasajero
+
+select PasajeroID,Nombres,Apellidos,NumeroPasaporte from Pasajeros
 
 
 
@@ -253,13 +256,21 @@ FROM Aeronaves A
 INNER JOIN TipoAeronave TA ON A.TipoAeronaveID = TA.TipoAeronaveID
 INNER JOIN Aerolineas AE ON A.AerolineaID = AE.AerolineaID;
 
+
+select *from Reservas
+select *from ReservaPasajero
+
 create view ReservaPasajero AS
-SELECT p.PasajeroID,p.Nombres,p.Apellidos,r.ReservaID,r.FechaReserva,v.NumeroVuelo,v.FechaHoraSalidaProgramada,
-v.FechaHoraLlegadaProgramada,cv.Descripcion AS ClaseViaje,r.PrecioTotal
+SELECT p.PasajeroID,p.Nombres,p.Apellidos,r.ReservaID,r.FechaReserva,v.NumeroVuelo,cv.Descripcion AS ClaseViaje,r.PrecioTotal
 FROM Reservas r
 INNER JOIN Pasajeros p ON r.PasajeroID = p.PasajeroID
 INNER JOIN Vuelos v ON r.VueloID = v.VueloID
 INNER JOIN ClaseViaje cv ON r.IDClaseViaje = cv.ClaseViajeID;
+
+select *from Pasajeros 
+SELECT p.PasajeroID,p.Nombres,p.Apellidos, p.FechaNacimiento,p.PaisNacionalidadID,p.NumeroPasaporte  from Pasajeros AS p 
+INNER JOIN Paises pa ON pa.PaisID=p.PaisNacionalidadID
+
 
 
 create view InfoVuelos AS
@@ -272,6 +283,12 @@ INNER JOIN Aerolineas AR ON A.AerolineaID = AR.AerolineaID
 INNER JOIN Rutas R ON V.RutaID = R.RutaID
 INNER JOIN Paises POrigen ON R.OrigenPaisID = POrigen.PaisID
 INNER JOIN Paises PDestino ON R.DestinoPaisID = PDestino.PaisID;
+
+create view RegistroPasajero AS
+SELECT p.PasajeroID,p.Nombres,p.Apellidos,p.NumeroPasaporte,p.FechaNacimiento,pa.NombrePais AS Pais
+FROM Pasajeros p
+INNER JOIN 
+Paises pa ON p.PaisNacionalidadID = pa.PaisID;
 
 CREATE TRIGGER TR_RestarAsiento
 ON Boletos
@@ -288,6 +305,10 @@ BEGIN
     INNER JOIN INSERTED I ON I.ReservaID = R.ReservaID;
 END;
 
+
+SELECT PasajeroID, Nombres, Apellidos, NumeroPasaporte
+FROM Pasajeros
+ORDER BY PasajeroID ASC;
 
 
 select *from Vuelos
